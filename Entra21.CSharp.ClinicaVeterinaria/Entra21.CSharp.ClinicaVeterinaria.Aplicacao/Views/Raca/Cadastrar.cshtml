@@ -1,5 +1,6 @@
 ﻿@{
     Layout = "~/Pages/Shared/_Layout.cshtml";
+    var especies = ViewBag.Especies as List<string>;
 }
 
 <h3>Cadastro de Raça</h3>
@@ -8,17 +9,19 @@
     <div>
         <label for="campo_nome" class="form-label">
             Nome <span class="text-danger fw-bold">*</span>
-            </label>
+        </label>
         <input type="text" id="campo_nome" name="nome" class="form-control" required="required" />
     </div>
     <div class="mb-3">
         <label for="campo_especie" class="form-label">
             Espécie <span class="text-danger fw-bold">*</span>
-            </label>
+        </label>
         <select id="campo_especie" name="especie" class="form-select" required="required">
             <option selected="selected" disabled="disabled" value="">Selecione uma opção</option>
-            <option value="Cachorro">Cachorro</option>
-            <option value="Gato">Gato</option>
+            @foreach (var especie in especies)
+            {
+                <option value="@especie">@especie</option>
+            }
         </select>
     </div>
     <div class="text-end">
