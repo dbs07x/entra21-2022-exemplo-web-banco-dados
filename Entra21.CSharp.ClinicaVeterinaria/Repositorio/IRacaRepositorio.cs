@@ -2,7 +2,7 @@
 
 namespace Entra21.CSharp.ClinicaVeterinaria.Repositorio
 {
-    internal interface IRacaRepositorio
+    public interface IRacaRepositorio
     {
         void Cadastrar(Raca raca);
         List<Raca> ObterTodos();
