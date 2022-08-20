@@ -5,9 +5,15 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.CSharp.ClinicaVeterinaria.Aplicacao", "Entra21.CSharp.ClinicaVeterinaria.Aplicacao\Entra21.CSharp.ClinicaVeterinaria.Aplicacao.csproj", "{995EB533-6C5B-472A-B064-CF06927632A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico", "Servico\Servico.csproj", "{06C94DCB-4190-401F-A728-8B5795CE9F7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servico", "Servico\Servico.csproj", "{06C94DCB-4190-401F-A728-8B5795CE9F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Repositorio\Repositorio.csproj", "{93ED195D-EABD-44A1-8919-36542865EBB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositorio", "Repositorio\Repositorio.csproj", "{93ED195D-EABD-44A1-8919-36542865EBB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Application", "00 - Application", "{89B78681-FD11-46DE-9AD4-7F62CF724643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{BFD6FE32-5EE2-40C2-AB24-BE0702A97AD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Infra", "02 - Infra", "{26D88BEF-4E5F-4363-8CD1-6AB10F2C1B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{995EB533-6C5B-472A-B064-CF06927632A1} = {89B78681-FD11-46DE-9AD4-7F62CF724643}
+		{06C94DCB-4190-401F-A728-8B5795CE9F7E} = {BFD6FE32-5EE2-40C2-AB24-BE0702A97AD4}
+		{93ED195D-EABD-44A1-8919-36542865EBB1} = {26D88BEF-4E5F-4363-8CD1-6AB10F2C1B5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11B7A0FD-BE6B-473D-966E-EED00952171F}
