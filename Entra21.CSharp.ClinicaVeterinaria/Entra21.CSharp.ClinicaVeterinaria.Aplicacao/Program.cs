@@ -7,10 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ClinicaVeterinariaContexto>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("SqlServer")));
+options.UseSqlServer(
+builder.Configuration.GetConnectionString("SqlServer")));
 
 var app = builder.Build();
+
+using (var scopo = app.Services.CreateScope())
+{
+    var contexto = scopo.ServiceProvider.GetRequiredService<ClinicaVeterinariaContexto>();
+    contexto.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -32,8 +38,8 @@ app.MapRazorPages();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 
 app.Run();
